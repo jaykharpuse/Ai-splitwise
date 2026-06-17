@@ -1,74 +1,211 @@
-# Splitr by Jay Kharpuse
+# 💸 Splitr
 
-Splitr is a modern expense-splitting app that helps friends and groups track shared spending, settle balances, and stay on top of who owes who.
+A modern full-stack expense splitting application designed to simplify shared expenses among friends, roommates, travel groups, and teams.
 
-## Features
-- Group expense tracking with flexible splits
-- Balances dashboard and settlement flow
-- Monthly insights and payment reminders (Inngest + Gemini)
-- Email notifications via Resend
-- Clerk authentication and Convex backend
+Splitr helps users track expenses, manage group balances, send payment reminders, and gain insights into spending patterns through an intuitive and scalable platform.
 
-## Tech Stack
-- Next.js 15 (App Router), React 19
-- Convex (database + serverless functions)
-- Clerk (auth)
-- Inngest (background jobs)
-- Resend (email)
-- Tailwind CSS 4 + Radix UI
+---
 
-## Getting Started
-1) Install dependencies
+## ✨ Features
+
+### 👥 Group Expense Management
+
+* Create and manage expense groups
+* Add shared expenses with flexible split options
+* Track contributions and outstanding balances
+
+### 📊 Smart Balance Tracking
+
+* Real-time balance calculations
+* Clear settlement workflow
+* Simplified debt management between group members
+
+### 🤖 AI-Powered Insights
+
+* Monthly spending summaries
+* Expense analysis using Gemini AI
+* Personalized financial insights
+
+### ⏰ Automated Reminders
+
+* Scheduled payment reminders
+* Monthly expense reports
+* Background job processing with Inngest
+
+### 📧 Notifications
+
+* Email notifications powered by Resend
+* Settlement and reminder alerts
+
+### 🔐 Secure Authentication
+
+* User authentication and authorization with Clerk
+* Protected routes and secure session management
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js 15 (App Router)
+* React 19
+* Tailwind CSS 4
+* Radix UI
+
+### Backend
+
+* Convex
+* Serverless Functions
+
+### Authentication
+
+* Clerk
+
+### Background Jobs
+
+* Inngest
+
+### Email Service
+
+* Resend
+
+### AI Integration
+
+* Google Gemini
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd splitr
+```
+
+### 2. Install Dependencies
+
 ```bash
 npm install
 ```
 
-2) Configure environment variables
+### 3. Configure Environment Variables
+
 ```bash
 cp .env.example .env.local
 ```
-Fill the values in `.env.local`.
 
-3) Start Convex locally
+Fill in all required environment variables.
+
+### 4. Start Convex
+
 ```bash
 npx convex dev
 ```
 
-4) Run the app
+### 5. Run Development Server
+
 ```bash
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open:
 
-## Environment Variables
-Required:
-- `NEXT_PUBLIC_APP_URL`
-- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
-- `CLERK_SECRET_KEY`
-- `CLERK_JWT_ISSUER_DOMAIN`
-- `NEXT_PUBLIC_CONVEX_URL`
-- `RESEND_API_KEY`
-- `GEMINI_API_KEY`
+```text
+http://localhost:3000
+```
 
-## Background Jobs (Inngest)
-This app uses scheduled jobs for reminders and monthly insights. Configure Inngest in production and point it to:
-- `https://<your-domain>/api/inngest`
+---
 
-For local development, use the Inngest dev server and the local endpoint.
+## 🔑 Environment Variables
 
-## Deployment (Vercel)
-1) Push the repo to GitHub.
-2) Import the project in Vercel.
-3) Add the env vars from `.env.example` in Vercel.
-4) Set the production `NEXT_PUBLIC_APP_URL` to your Vercel domain.
-5) Deploy.
+Required variables:
 
-## Scripts
-- `npm run dev` - local dev server
-- `npm run build` - production build
-- `npm run start` - start production server
-- `npm run lint` - lint checks
+```env
+NEXT_PUBLIC_APP_URL
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+CLERK_SECRET_KEY
+CLERK_JWT_ISSUER_DOMAIN
+NEXT_PUBLIC_CONVEX_URL
+RESEND_API_KEY
+GEMINI_API_KEY
+```
 
-## Credits
-Built and maintained by Jay Kharpuse.
+---
+
+## ⚙️ Background Jobs
+
+Splitr uses Inngest for:
+
+* Payment reminders
+* Monthly spending reports
+* Automated notifications
+* Scheduled AI insights
+
+Production Endpoint:
+
+```text
+/api/inngest
+```
+
+---
+
+## 📦 Deployment
+
+### Deploy on Vercel
+
+1. Push the repository to GitHub
+2. Import the project into Vercel
+3. Configure all environment variables
+4. Set the production application URL
+5. Deploy
+
+---
+
+## 📜 Available Scripts
+
+```bash
+npm run dev
+```
+
+Runs the development server.
+
+```bash
+npm run build
+```
+
+Creates a production build.
+
+```bash
+npm run start
+```
+
+Starts the production server.
+
+```bash
+npm run lint
+```
+
+Runs lint checks.
+
+---
+
+## 🎯 Project Goals
+
+* Build a scalable expense management platform
+* Explore modern full-stack architecture
+* Implement background job processing
+* Integrate AI-powered financial insights
+* Practice production-ready application development
+
+---
+
+## 👨‍💻 Author
+
+**Jay Kharpuse**
+
+Software Developer | Full Stack Developer | MERN & Next.js Enthusiast
+
+Built with a focus on scalability, clean architecture, and modern web development practices.
